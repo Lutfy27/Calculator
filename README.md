@@ -7,4 +7,4 @@ Terdapat penilaian pada project Kalkulator : <br>
 5. ada fitur minus, koma, persen <br>
 6. input bisa diketik keyboard (optional) <br>
 <br>
-cek hasilnya di https://Lutfy27.github.io
+cek hasilnya di https://lutfy27.github.io/Calculator/
