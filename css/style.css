@@ -1,102 +1,142 @@
-html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-  }
-  
-body{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: rgb(131, 131, 131);
+body {
+  margin: 0;
+  padding: 0;
 }
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-  
-  .calculator {
-    border-radius: 30px;
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  h1 {
-    width: 100%;
-    height: 80px;
-    border: none;
-    background-color: #060709;
-    color: white;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
-    padding-top: 45px;
-    font-size: 3rem;
-    border-radius: 30px;
-  }
 
-  h2 {
-    width: 100%;
-    height: 80px;
-    border: none;
-    background-color: #060709;
-    color: white;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
-    font-size: 6rem;
-    border-radius: 30px;
-  }
-  button {
-    height: 60px;
-    font-size: 3rem!important;
-  }
-  
-  .calculator-keys {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 48px;
+  font-family: Garamond;
+}
 
-  .card{
-    background-color: #2f3033;
-  }
+#parallax-1 {
+  background-image: url('img/ew.jpg');
+}
 
-  .btn-bd-primary {
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet);
-    --bs-btn-border-color: var(--bd-violet);
-    --bs-btn-border-radius: .5rem;
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
-    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
-    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
-  }
+#parallax-2 {
+  background-image: url('img/senorita.jpg');
+}
 
-  #opr{
-    --bs-btn-color: var(--bs-green);
-  }
+section {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-align: justify;
+}
 
-  #opr2{
-    --bs-btn-color: var(--bs-red);
-  }
+section p {
+  margin: 50px;
+  font-family: serif;
+}
 
-  #a{
-    border-radius: 30px;
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: hsl(220, 20%, 3%);
-    display: grid;
-    padding-top: 60px;
-    text-align: center;
-  }
+section h2 {
+  margin-left: 10px;
+}
+
+.footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+/* css calc */
+/* Light Theme */
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container.light-theme {
+  background-color: #f4f4f4;
+  border-color: #ccc;
+}
+
+.result.light-theme {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.button.light-theme {
+  background-color: #ccc;
+  color: #333;
+}
+
+.button.light-theme:hover {
+  background-color: #bbb;
+}
+
+/* Black Theme */
+body.black-theme {
+  background-color: #111;
+  color: #f4f4f4;
+}
+
+.container.black-theme {
+  background-color: #111;
+  border-color: #222;
+}
+
+.result.black-theme {
+  background-color: #222;
+  border-color: #222;
+  font-family: sans-serif;
+}
+
+.button.black-theme {
+  background-color: #222;
+  color: #f4f4f4;
+}
+
+.button.black-theme:hover {
+  background-color: #333;
+}
+
+/* Common Styles */
+.container {
+  width: 280px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.result {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: right;
+  font-weight: bold;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.theme-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

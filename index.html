@@ -6,57 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator v2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+
 </head>
 
 <body>
-    <script type="text/javascript" src="js/main.js"></script>
-    <div id="a">
-        <table>
-            <tr>
-                <td>
-                    <h1 id="screen"></h1>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2 id="screen2"></h2>
-                </td>
-            </tr>
-        </table>
-        <div class="calculator card">
-            <div class="calculator-keys">
+    <header>
+        <h1>Calculator v2</h1>
+    </header>
 
-                <button type="button" id="opr" class="btn btn-dark" onclick="reset()">AC</button>
-                <button type="button" id="opr" class="btn btn-dark" onclick="min()">+/-</button>
-                <button type="button" id="opr" class="btn btn-dark" onclick="persen()">%</button>
-                <button type="button" id="opr2" class="btn btn-dark" onclick="input('/')">&divide;</button>
+    <section class="parallax" id="parallax-1">
+        <h2>What is Parallax Scrolling?</h2>
+    </section>
 
-                <button type="button" class="btn btn-dark" onclick="input(7)">7</button>
-                <button type="button" class="btn btn-dark" onclick="input(8)">8</button>
-                <button type="button" class="btn btn-dark" onclick="input(9)">9</button>
-                <button type="button" id="opr2" class="btn btn-dark" onclick="input('*')">&times;</button>
+    <section>
+        <h2>About Parallax Scrolling</h2>
+        <p>Parallax scrolling adalah sebuah teknik yang digunakan dalam desain web untuk menciptakan pengalaman scroll
+            halaman yang interaktif. Teknik ini memberikan efek gerakan pada latar belakang gambar dengan kecepatan yang
+            berbeda dari konten utama saat pengguna melakukan pengguliran halaman.</p>
+    </section>
 
-                <button type="button" class="btn btn-dark" onclick="input(4)">4</button>
-                <button type="button" class="btn btn-dark" onclick="input(5)">5</button>
-                <button type="button" class="btn btn-dark" onclick="input(6)">6</button>
-                <button type="button" id="opr2" class="btn btn-dark" onclick="input('-')">&minus;</button>
+    <section class="parallax" id="parallax-2">
 
-                <button type="button" class="btn btn-dark" onclick="input(1)">1</button>
-                <button type="button" class="btn btn-dark" onclick="input(2)">2</button>
-                <button type="button" class="btn btn-dark" onclick="input(3)">3</button>
-                <button type="button" id="opr2" class="btn btn-dark" onclick="input('+')">&plus;</button>
-
-                <button type="button" class="btn btn-dark" onclick="hapus()">&leftarrow;</button>
-                <button type="button" class="btn btn-dark" onclick="input('0')">0</button>
-                <button type="button" class="btn btn-dark" onclick="input('.')">.</button>
-                <button type="button" id="opr2" class="btn btn-dark" onclick="hasil()">=</button>
-
-            </div>
+        <div class="container light-theme">
+            <div class="result light-theme" id="result">0</div>
+            <button class="button light-theme" onclick="clearResult()">C</button>
+            <button class="button light-theme" onclick="appendNumber('7')">7</button>
+            <button class="button light-theme" onclick="appendNumber('8')">8</button>
+            <button class="button light-theme" onclick="appendNumber('9')">9</button>
+            <button class="button light-theme" onclick="appendOperator('/')">/</button>
+            <button class="button light-theme" onclick="appendNumber('4')">4</button>
+            <button class="button light-theme" onclick="appendNumber('5')">5</button>
+            <button class="button light-theme" onclick="appendNumber('6')">6</button>
+            <button class="button light-theme" onclick="appendOperator('*')">x</button>
+            <button class="button light-theme" onclick="appendNumber('1')">1</button>
+            <button class="button light-theme" onclick="appendNumber('2')">2</button>
+            <button class="button light-theme" onclick="appendNumber('3')">3</button>
+            <button class="button light-theme" onclick="appendOperator('-')">-</button>
+            <button class="button light-theme" onclick="appendOperator('.')">.</button>
+            <button class="button light-theme" onclick="appendNumber('0')">0</button>
+            <button class="button orange" onclick="calculate()">=</button>
+            <button class="button orange" onclick="appendOperator('+')">+</button>
+            <button class="theme-button" onclick="toggleTheme()">Toggle Theme</button>
         </div>
-    </div>
+    </section>
+
+    <!-- <section>
+        <h2>Implementing Parallax Scrolling</h2>
+        <p>To implement parallax scrolling, you need to set up your HTML structure, define the CSS styles, and customize
+            the effect based on your design requirements.</p>
+    </section> -->
+
+    <footer class="footer">
+        <p>&copy; 2023 Calculator v2. All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
